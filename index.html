@@ -1,235 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prathibha Dasanayaka - Portfolio</title>
-    <style>
-        /* Global reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css" />
 
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        section {
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        .portfolio-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .portfolio-item:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        .portfolio-item img {
-            max-width: 100%;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-item h3 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-item p {
-            font-size: 1.1em;
-            color: #777;
-        }
-
-        form {
-            margin-top: 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        form input[type="text"],
-        form input[type="email"],
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-
-        form textarea {
-            resize: vertical;
-        }
-
-        form button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            padding: 12px 20px;
-            font-size: 1em;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        form button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/1fc2a4f648.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- Header section -->
-    <header id="home">
-        <div class="container">
-            <h1>Prathibha Dasanayaka</h1>
-            <p>UI/UX Designer</p>
-            <!-- Social media links -->
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+    <header id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" alt="logo" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>Hi, I'm <span>Prathibha</span><br />Dasanayaka</h1>
         </div>
+      </div>
     </header>
 
     <!-- About section -->
     <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a passionate UI/UX designer with expertise in creating intuitive and user-friendly interfaces.</p>
-            <p>Feel free to explore my work below and get in touch if you have any inquiries or project opportunities.</p>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="Prathibha Dasanayaka" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a UI/UX Designer with over 5 years of experience. I have
+              worked on various projects and collaborated with teams to create
+              successful products. I am passionate about creating beautiful and
+              functional designs for websites and applications.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-links" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>UI/UX</span><br />
+                  Design Web/App interfaces
+                </li>
+                <li>
+                  <span>Web Development</span><br />
+                  Web app Development
+                </li>
+                <li>
+                  <span>App Development</span><br />
+                  Building Android/iOS apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2024 - Current</span><br />Senior UI/UX Designer at
+                  Company A
+                </li>
+                <li>
+                  <span>2024 - Current</span><br />Senior UI/UX Designer at
+                  Company A
+                </li>
+                <li>
+                  <span>2024 - Current</span><br />Senior UI/UX Designer at
+                  Company A
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022 - Current</span><br />Bachelor's Hons. Information
+                  Technology
+                </li>
+                <li>
+                  <span>2022 - Current</span><br />Bachelor's Hons. Information
+                  Technology
+                </li>
+                <li>
+                  <span>2022 - Current</span><br />Bachelor's Hons. Information
+                  Technology
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-crop-alt"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              I design beautiful and functional interfaces for websites and
+              applications.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+            <h2>App Design</h2>
+            <p>
+              I create mobile app designs that provide a great user experience.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              I create beautiful and functional designs for websites and
+              applications.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio section -->
     <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-items">
-                <!-- Example project item -->
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1 Title</h3>
-                    <p>Description of Project 1</p>
-                </div>
-                <!-- Repeat portfolio items as needed -->
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" alt="Project 1" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The project is a social media app that allows users to share
+                photos and videos with their friends. The app also includes
+                features such as messaging, notifications, and a news feed.
+              </p>
+              <a href="#"><i class="fas fa-crop-alt"></i></a>
             </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" alt="Project 2" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The project is a social media app that allows users to share
+                photos and videos with their friends. The app also includes
+                features such as messaging, notifications, and a news feed.
+              </p>
+              <a href="#"><i class="fas fa-crop-alt"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" alt="Project 3" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The project is a social media app that allows users to share
+                photos and videos with their friends. The app also includes
+                features such as messaging, notifications, and a news feed.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
         </div>
+        <a href="#" class="view-more btn">View More</a>
+      </div>
     </section>
 
     <!-- Contact section -->
     <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Let's discuss your next project!</p>
-            <form action="mailto:yourname@example.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fas fa-paper-plane"></i> prathibhadasanayaka@gmail.com
+            </p>
+            <p><i class="fas fa-phone-square-alt"></i> +94 77 123 4567</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Prathibha Dasanayaka. All rights reserved.</p>
-        </div>
+      <div class="copyright">
+        <p>&copy; 2024 Prathibha Dasanayaka. All rights reserved.</p>
+      </div>
     </footer>
-    
+
     <!-- Optional JavaScript -->
-    <!-- Add your scripts here -->
-</body>
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabName) {
+        for (var link of tabLinks) {
+          link.classList.remove("active-links");
+        }
+        for (var content of tabContents) {
+          content.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      let sidemenu = document.getElementById("sidemenu");
+      function toggleMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyyhKsQpTYfK4IZ7BaEt-mkdGvkndHONHn2phyqaS0dBch8dfvVM4etR4QOnX6OKrMO/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(() => {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
 </html>
